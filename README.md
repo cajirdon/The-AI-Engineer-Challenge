@@ -1,3 +1,32 @@
+# Clinical Reasoning Reviewer
+
+An educational application for practicing clinical reasoning using fictional cases. The learner enters a case and their reasoning, and receives feedback on identified points, points to reconsider, missing information, and a question for further reasoning.
+
+## Intended use
+
+For educational use only. Do not enter identifiable patient information. This prototype is not a validated clinical decision system and must not be used for patient care. Model responses require human review.
+
+## Technology
+
+- Frontend: HTML, CSS and JavaScript
+- Backend: Python and FastAPI
+- Configured model: gpt-5.6-terra via the OpenAI API
+- Hosting: Vercel
+
+## Current status
+
+A protected Vercel Preview has been tested with a fictional case. The public production page is accessible, but review generation is not yet configured there.
+
+## Local setup
+
+Install dependencies with uv sync. Set OPENAI_API_KEY securely in your environment or local .env file, then run uv run uvicorn api.index:app --host 127.0.0.1 --port 8000 from the repository root. Open http://127.0.0.1:8000 in your browser. Do not commit API keys.
+
+---
+
+The original AI Engineer Challenge instructions are preserved below.
+
+---
+
 <p align = "center" draggable=”false” ><img src="https://github.com/AI-Maker-Space/LLM-Dev-101/assets/37101144/d1343317-fa2f-41e1-8af1-1dbb18399719" 
      width="200px"
      height="auto"/>
