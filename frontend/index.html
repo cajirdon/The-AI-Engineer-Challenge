@@ -127,7 +127,12 @@
       result.textContent = "";
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/chat", {
+        const response = await fetch(
+          (["127.0.0.1", "localhost"].includes(window.location.hostname)
+            && window.location.port === "8001")
+            ? "http://127.0.0.1:8000/api/chat"
+            : "/api/chat",
+          {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
