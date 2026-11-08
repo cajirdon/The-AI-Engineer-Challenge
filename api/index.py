@@ -19,7 +19,6 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class ChatRequest(BaseModel):
     case_text: str
@@ -52,6 +51,7 @@ def chat(request: ChatRequest):
             f"Fictional case:\n{request.case_text}\n\n"
             f"Learner reasoning:\n{request.reasoning}"
         )
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = client.chat.completions.create(
             model="gpt-5.6-terra",
             messages=[
