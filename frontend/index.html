@@ -86,11 +86,12 @@
 
     <form id="review-form" class="card">
       <label for="case-text">Fictional case</label>
-      <textarea id="case-text" required>A fictional 62-year-old patient reports progressive shortness of breath and ankle swelling. The patient has a history of hypertension. No examination findings or test results are available.</textarea>
+      <textarea id="case-text" required maxlength="4000">A fictional 62-year-old patient reports progressive shortness of breath and ankle swelling. The patient has a history of hypertension. No examination findings or test results are available.</textarea>
 
       <label for="reasoning">Your reasoning</label>
-      <textarea id="reasoning" required placeholder="What possibilities would you consider, and why?"></textarea>
+      <textarea id="reasoning" required maxlength="4000" placeholder="What possibilities would you consider, and why?"></textarea>
 
+      <p>Each field accepts up to 4,000 characters.</p>
       <p>
         <button id="submit-button" type="submit">Review reasoning</button>
       </p>

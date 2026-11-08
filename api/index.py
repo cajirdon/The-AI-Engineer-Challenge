@@ -37,10 +37,10 @@ def chat(request: ChatRequest):
             detail="Both case and reasoning are required."
         )
 
-    if len(request.case_text) > 10000 or len(request.reasoning) > 10000:
+    if len(request.case_text) > 4000 or len(request.reasoning) > 4000:
         raise HTTPException(
             status_code=422,
-            detail="Each field must contain at most 10000 characters."
+            detail="Each field must contain at most 4000 characters."
         )
 
     if not os.getenv("OPENAI_API_KEY"):
