@@ -15,7 +15,7 @@ For educational use only. Do not enter identifiable patient information. This pr
 
 ## Current status
 
-A protected Vercel Preview has been tested with a fictional case. The public production page is accessible, but review generation is not yet configured there.
+A protected Vercel Preview has been tested with a fictional case. The public production application is available at https://the-ai-engineer-challenge-mu-nine.vercel.app and was tested with a fictional case.
 
 ## Local setup
 
